@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    
+</head>
+<body>
+    <h1>第１回Assignment</h1>
+
+    <div>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">import pandas as pd # データ分析に用いるライブラリ</li>
+            <li style="background-color:#EEF;">import matplotlib.pyplot as plt # グラフ表示に用いるライブラリ</li>
+            <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True) # 表示のずれを少し緩和</li>
+            <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic' # グラフ表示におけるフォントの指定</li>
+            <li style="background-color:#EFF;">data_path = "./data.csv"</li>
+            <li style="background-color:#EEF;">df_data = pd.read_csv(data_path, encoding="utf-8-sig")</li>
+            <li style="background-color:#EFF;">print(df_data.columns)</li>
+            <li style="background-color:#EEF;">df_mean = df_data[df_data.loc[:, "間取り"] == "ワンルーム"]</li>
+            <li style="background-color:#EFF;">df_mean.groupby("路線").mean().loc[:, ["家賃", "合計時間"]].plot.bar(subplots=True,</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout=(2, 2),</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figsize=(16, 10))</li>
+            <li style="background-color:#EEF;">plt.show()</li>
+            </ol></code>
+        <h2>感想</h2>    
+        <ul>
+         <li>とても難しく理解しきっていないが、これを用いることでワンルームでの各路線における通勤時間が表示される</li>
+        </ul>
+    
+    </div>
+    
+<body>    
+</html>
